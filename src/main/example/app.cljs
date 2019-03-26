@@ -1,11 +1,9 @@
 (ns example.app
   (:require
-   ["expo" :as ex]
    ["react-native" :as rn]
    ["react" :as react]
-   [reagent.core :as r]
    [re-frame.core :as rf]
-   [shadow.expo :as expo]
+   [example.reloader]
    [example.events]
    [example.subs]))
 
@@ -44,21 +42,21 @@
           (clj->js)
           (rn/StyleSheet.create)))
 
-(defn root []
+(defn Example []
   (let [counter (rf/subscribe [:get-counter])]
-    (fn []
-      [:> rn/View {:style (.-container styles)}
-       [:> rn/Text {:style (.-title styles)} "Clicked: " @counter]
-       [:> rn/TouchableOpacity {:style (.-button styles)
-                                :on-press #(rf/dispatch [:inc-counter])}
-        [:> rn/Text {:style (.-buttonText styles)} "Click me, I'll count"]]
-       [:> rn/Image {:source splash-img :style {:width 200 :height 200}}]
-       [:> rn/Text {:style (.-label styles)} "Using: shadow-cljs+expo+reagent+re-frame"]])))
+      (fn []
+        [:> rn/View {:style (.-container styles)}
+         [:> rn/Text {:style (.-title styles)} "Clicked: " @counter]
+         [:> rn/TouchableOpacity {:style (.-button styles)
+                                  :on-press #(rf/dispatch [:inc-counter])}
+          [:> rn/Text {:style (.-buttonText styles)} "Click me–do it now!"]]
+         [:> rn/Image {:source splash-img :style {:width 200 :height 200}}]
+         [:> rn/Text {:style (.-label styles)} "Using: shadow-cljs+reagent+re-frame"]])))
 
 (defn start
   {:dev/after-load true}
   []
-  (expo/render-root (r/as-element [root])))
+  (example.reloader/render-root [Example]))
 
 (defn init []
   (rf/dispatch-sync [:initialize-db])
