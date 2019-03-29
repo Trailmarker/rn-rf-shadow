@@ -49,7 +49,7 @@
          [:> rn/Text {:style (.-title styles)} "Clicked: " @counter]
          [:> rn/TouchableOpacity {:style (.-button styles)
                                   :on-press #(rf/dispatch [:inc-counter])}
-          [:> rn/Text {:style (.-buttonText styles)} "Click me–do it now!"]]
+          [:> rn/Text {:style (.-buttonText styles)} "Click me, do it now!"]]
          [:> rn/Image {:source splash-img :style {:width 200 :height 200}}]
          [:> rn/Text {:style (.-label styles)} "Using: shadow-cljs+reagent+re-frame"]])))
 

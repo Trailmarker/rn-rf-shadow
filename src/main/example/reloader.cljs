@@ -32,5 +32,5 @@
                            (body)
                            body)))}))]
 
-        (.registerComponent rn/AppRegistry "scout" #(r/reactify-component Root))))))
+        (.registerComponent rn/AppRegistry "rn-rf-shadow" #(r/reactify-component Root))))))
 

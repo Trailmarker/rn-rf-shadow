@@ -1,3 +1,3 @@
-rootProject.name = 'scout'
+rootProject.name = 'rn-rf-shadow'
 
 include ':app'
