@@ -13,3 +13,4 @@ pom.xml
 *.iml
 app/
 android/.gradle
+android/build

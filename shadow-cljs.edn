@@ -15,4 +15,5 @@
    :output-dir "app"
    :compiler-options {:infer-externs :auto}
    :devtools {:autoload true
-              :preloads []}}}}
+              :repl-init-ns scout.dev-preloads
+              :preloads [scout.dev-preloads]}}}}
