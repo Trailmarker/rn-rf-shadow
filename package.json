@@ -9,11 +9,12 @@
   "dependencies": {
     "@babel/core": "^7.4.0",
     "@babel/runtime": "^7.4.2",
-    "react": "16.5.0",
-    "react-native": "0.57.1"
+    "react": "16.6.3",
+    "react-native": "0.57.8"
   },
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.53.1",
+    "patch-package": "^6.1.0",
     "shadow-cljs": "^2.8.8"
   },
   "private": true

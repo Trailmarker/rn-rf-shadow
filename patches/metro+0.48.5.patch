@@ -1,0 +1,13 @@
+diff --git a/node_modules/metro/src/JSTransformer/worker.js b/node_modules/metro/src/JSTransformer/worker.js
+index 48851b1..4b17c4c 100644
+--- a/node_modules/metro/src/JSTransformer/worker.js
++++ b/node_modules/metro/src/JSTransformer/worker.js
+@@ -200,7 +200,7 @@ class JsTransformer {
+       }
+ 
+       if (!options.dev) {
+-        plugins.push([constantFoldingPlugin, opts]);
++        // plugins.push([constantFoldingPlugin, opts]);
+         plugins.push([inlinePlugin, opts]);
+       }
+       var _transformFromAstSync = transformFromAstSync(ast, "", {

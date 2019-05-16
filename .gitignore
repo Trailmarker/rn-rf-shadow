@@ -6,11 +6,23 @@ npm-debug.*
 *.key
 *.mobileprovision
 out/
-.shadow-cljs/
-.nrepl-port
 pom.xml
 .idea/
 *.iml
+
+# Shadow-CLJS outputs
 app/
+.shadow-cljs/
+.nrepl-port
+
+# Android outputs
 android/.gradle
 android/build
+
+# iOS outputs
+ios/DerivedData
+ios/Index
+ios/build
+ios/scout.xcodeproj/project.xcworkspace
+ios/scout.xcodeproj/xcuserdata
+
