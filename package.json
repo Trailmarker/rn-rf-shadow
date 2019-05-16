@@ -4,7 +4,8 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "release": "shadow-cljs release app"
+    "release": "shadow-cljs release app",
+    "repl": "rlwrap shadow-cljs cljs-repl app"
   },
   "dependencies": {
     "@babel/core": "^7.4.0",
